@@ -1,0 +1,36 @@
+{
+  "name": "metaverse-factory",
+  "version": "1.0.0",
+  "description": "3D Metaverse Factory Digital Twin with MQTT Integration",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["electron", "threejs", "mqtt", "digital-twin", "metaverse", "factory", "industry4.0"],
+  "author": "Metaverse Factory Developer",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.158.0",
+    "mqtt": "^4.3.7",
+    "dat.gui": "^0.7.9"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.digitaltwin.metaverse-factory",
+    "productName": "Metaverse Factory",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer/**/*",
+      "node_modules/**/*"
+    ]
+  }
+} 
