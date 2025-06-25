@@ -256,10 +256,6 @@ factory.setConveyorSpeed(1.5);
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 라이선스
-
-MIT License - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
-
 ## 📞 지원
 
 - **이슈 리포트**: [GitHub Issues](https://github.com/zenit9hub/metaverse-factory/issues)
