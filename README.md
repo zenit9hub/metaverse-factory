@@ -263,7 +263,7 @@ MIT License - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 ## 📞 지원
 
 - **이슈 리포트**: [GitHub Issues](https://github.com/your-username/metaverse-factory/issues)
-- **문의**: your-email@example.com
+- **문의**: flitsky@naver.com
 
 ## 🔄 업데이트 로그
 
