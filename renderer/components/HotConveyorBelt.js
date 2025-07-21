@@ -294,6 +294,40 @@ class HotConveyorBelt extends ConveyorBelt {
         return this.temperature + Math.sin(this.temperatureVariation) * 3;
     }
     
+    // heat effects 활성화/비활성화 제어
+    setHeatEffectsActive(active) {
+        console.log(`🔥 Room B heat effects ${active ? '활성화' : '비활성화'}`);
+        
+        // 열기 파티클 표시/숨김
+        if (this.heatParticles) {
+            this.heatParticles.visible = active;
+        }
+        
+        // 고온 조명 표시/숨김
+        if (this.hotLight) {
+            this.hotLight.visible = active;
+        }
+        
+        // 경고 텍스트 표시/숨김
+        if (this.warningText) {
+            this.warningText.visible = active;
+        }
+        
+        // Heat Distortion 효과 표시/숨김
+        if (this.heatDistortion) {
+            this.heatDistortion.forEach(plane => {
+                plane.visible = active;
+            });
+        }
+        
+        // 벨트 그룹 내의 모든 포인트 라이트들 제어
+        this.beltGroup.children.forEach(child => {
+            if (child instanceof THREE.PointLight && child !== this.hotLight) {
+                child.visible = active;
+            }
+        });
+    }
+    
     // 디버그 정보 확장
     getDebugInfo() {
         const baseInfo = super.getDebugInfo();

@@ -240,6 +240,12 @@ class Room {
         if (this.airConditioner) {
             this.airConditioner.setPowerStatus(isOn);
         }
+        
+        // Room B의 고온 효과 제어
+        if (this.id === 'B' && this.isHotRoom && this.conveyorBelt) {
+            // 에어컨이 켜지면 heat effects 비활성화, 꺼지면 활성화
+            this.conveyorBelt.setHeatEffectsActive(!isOn);
+        }
     }
     
     getAirconStatus() {
